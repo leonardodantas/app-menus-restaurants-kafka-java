@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 public class UpdateSearchInformation implements IUpdateSearchInformation {
 
     private final ISendSearchInformationMessage sendSearchInformation;
-
     public UpdateSearchInformation(final ISendSearchInformationMessage sendSearchInformation) {
         this.sendSearchInformation = sendSearchInformation;
     }

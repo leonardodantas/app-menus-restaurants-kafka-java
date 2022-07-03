@@ -1,21 +1,20 @@
 package com.br.rank.list.app.usecases.impl;
 
-import com.br.rank.list.app.messages.ISendSearchInformationMessage;
 import com.br.rank.list.app.usecases.IRemoveSearchInformation;
 import org.springframework.stereotype.Component;
 
 @Component
 public class RemoveSearchInformation implements IRemoveSearchInformation {
 
-    private final ISendSearchInformationMessage sendSearchInformation;
+    private final IRemoveSearchInformation removeSearchInformation;
 
-    public RemoveSearchInformation(final ISendSearchInformationMessage sendSearchInformation) {
-        this.sendSearchInformation = sendSearchInformation;
+    public RemoveSearchInformation(final IRemoveSearchInformation removeSearchInformation) {
+        this.removeSearchInformation = removeSearchInformation;
     }
 
     @Override
     public void execute(final String productId) {
-        sendSearchInformation.execute(productId);
+        removeSearchInformation.execute(productId);
 
     }
 }
